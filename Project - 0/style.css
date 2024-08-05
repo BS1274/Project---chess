@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameboard {
+    width: 500px;
+    height: 500px;
+    /* background-color: black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.square{
+    height:62px;
+    width:62px;
+    position: relative;
+}
+
+/* fixing margin with chess pieces */
+.square svg {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    position: relative;
+    z-index:-9;
+}
+
+path{
+    position: relative;
+    z-index:-10;
+}
+
+.chesspiece{
+    position: relative;
+    z-index:9;
+}
+
+.dragging {
+    z-index: 1000; /*high z-index during drag to ensure it's on top */
+}
+/* Gameboard colours */
+.cream {
+    background-color: #F0D9B5; /* Light Beige or Cream */
+}
+
+.gray {
+    background-color: #dd6e14; /* Medium Brown or Dark Beige */
+}
+
+/* first two raws chess peices colour  */
+.black{
+    fill:rgb(0, 0, 0)
+}
+
+/* last two raws chess peices colour  */
+.white{
+    fill:rgb(255, 255, 255)
+}
+
